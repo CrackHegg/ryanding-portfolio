@@ -4,7 +4,6 @@
   "outputDirectory": "ryan-portfolio/dist",
   "installCommand": "cd ryan-portfolio && npm ci",
   "framework": null,
-  "functions": {},
   "rewrites": [
     {
       "source": "/(.*)",
