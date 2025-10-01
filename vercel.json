@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd ryan-portfolio && npm install && npm run build",
+  "outputDirectory": "ryan-portfolio/dist",
+  "installCommand": "cd ryan-portfolio && npm install",
+  "devCommand": "cd ryan-portfolio && npm run dev"
+}
