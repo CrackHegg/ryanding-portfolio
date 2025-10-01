@@ -1,0 +1,141 @@
+@import "../../vars.css";
+
+.container {
+  color: var(--color-text);
+  margin-top: var(--section-margin);
+  padding: 50px var(--section-padding);
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-bg) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.text h2 {
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: 35px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.text p {
+  color: var(--color-secondary);
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 25px;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  transform: translateY(-3px);
+  background: var(--color-card-hover);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.link img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.link a {
+  color: var(--color-text);
+  font-family: var(--font-family);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  transition: color 0.3s ease;
+}
+
+.link a:hover {
+  color: var(--color-primary);
+}
+
+.location {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  text-align: center;
+}
+
+.location p {
+  color: var(--color-secondary);
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+  margin: 0;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    padding: 40px 5%;
+    gap: 25px;
+  }
+
+  .text h2 {
+    font-size: 28px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .link {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+    padding: 12px 20px;
+  }
+
+  .link a {
+    font-size: 14px;
+  }
+
+  .location {
+    margin-top: 15px;
+    padding: 12px 20px;
+  }
+
+  .location p {
+    font-size: 14px;
+  }
+
+  .location p {
+    font-size: 18px;
+  }
+}

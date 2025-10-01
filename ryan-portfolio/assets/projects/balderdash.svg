@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200" fill="none">
+  <rect width="400" height="200" rx="10" fill="#dc2626"/>
+  <rect x="50" y="50" width="300" height="100" rx="5" fill="#ef4444"/>
+  <text x="200" y="85" text-anchor="middle" fill="white" font-family="Arial" font-size="18" font-weight="bold">Reverse Balderdash</text>
+  <text x="200" y="110" text-anchor="middle" fill="white" font-family="Arial" font-size="14">GPT-2 Fine-tuned Game</text>
+  <rect x="80" y="120" width="40" height="20" rx="3" fill="white" fill-opacity="0.3"/>
+  <rect x="130" y="120" width="40" height="20" rx="3" fill="white" fill-opacity="0.3"/>
+  <rect x="180" y="120" width="40" height="20" rx="3" fill="white" fill-opacity="0.3"/>
+  <rect x="230" y="120" width="40" height="20" rx="3" fill="white" fill-opacity="0.3"/>
+  <rect x="280" y="120" width="40" height="20" rx="3" fill="white" fill-opacity="0.3"/>
+</svg>

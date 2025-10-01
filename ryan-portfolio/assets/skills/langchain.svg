@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+  <rect width="40" height="40" rx="8" fill="#1c3c3c"/>
+  <text x="20" y="18" text-anchor="middle" fill="white" font-family="Arial" font-size="6" font-weight="bold">Lang</text>
+  <text x="20" y="26" text-anchor="middle" fill="white" font-family="Arial" font-size="6" font-weight="bold">Chain</text>
+  <path d="M12 30 L20 32 L28 30" stroke="white" stroke-width="1" fill="none"/>
+</svg>

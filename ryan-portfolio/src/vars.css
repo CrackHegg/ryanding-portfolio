@@ -1,0 +1,26 @@
+:root {
+    /* Colours */
+    --color-text: #ffffff;
+    --color-primary: #576cbc;
+    --color-secondary: #b8c5ea;
+    --color-secondary-muted: #8a9bc7;
+    --color-dark: #0b2447;
+    --color-bg: #04152d;
+    --color-card-bg: rgba(255, 255, 255, 0.08);
+    --color-card-border: rgba(255, 255, 255, 0.15);
+    --color-card-hover: rgba(255, 255, 255, 0.12);
+
+    /* Typography */
+    --font-family: "Roboto", "Arial", sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    /* Spacing */
+    --section-margin: 79px;
+    --section-padding: 10%;
+    --card-padding: 30px;
+    --card-border-radius: 15px;
+}

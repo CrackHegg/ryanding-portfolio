@@ -1,0 +1,126 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  background-color: rgba(12, 15, 25, 0.82);
+  color: var(--color-text);
+  margin-top: var(--section-margin);
+  padding: 70px var(--section-padding);
+}
+
+.title {
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: 35px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.skillCategory {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skillCategory:hover {
+  background: var(--color-card-hover);
+  transform: translateY(-2px);
+}
+
+.categoryTitle {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.skillItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.skillItem:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.skillItem img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+  object-fit: contain;
+}
+
+.skillItem p {
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 830px) {
+  .skillsGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .skillItems {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 15px;
+  }
+  
+  .skillItem {
+    min-width: 70px;
+    padding: 12px;
+  }
+  
+  .skillItem img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .skillItem p {
+    font-size: 12px;
+  }
+}

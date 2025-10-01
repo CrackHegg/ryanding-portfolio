@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+  <circle cx="30" cy="30" r="30" fill="#dc2626"/>
+  <!-- Playing cards in elegant fan -->
+  <rect x="15" y="20" width="10" height="15" rx="1.5" fill="white" stroke="#e2e8f0" stroke-width="0.5" transform="rotate(-25 20 27.5)"/>
+  <rect x="20" y="18" width="10" height="15" rx="1.5" fill="white" stroke="#e2e8f0" stroke-width="0.5" transform="rotate(-10 25 25.5)"/>
+  <rect x="25" y="17" width="10" height="15" rx="1.5" fill="white" stroke="#e2e8f0" stroke-width="0.5" transform="rotate(5 30 24.5)"/>
+  <rect x="30" y="18" width="10" height="15" rx="1.5" fill="white" stroke="#e2e8f0" stroke-width="0.5" transform="rotate(20 35 25.5)"/>
+  <rect x="35" y="20" width="10" height="15" rx="1.5" fill="white" stroke="#e2e8f0" stroke-width="0.5" transform="rotate(35 40 27.5)"/>
+  
+  <!-- Card suits on visible cards -->
+  <!-- Spade -->
+  <path d="M25 23 Q27 21 29 23 Q27 25 25 23 M27 25 L27 27" stroke="#000" stroke-width="1" fill="none" transform="rotate(-10 27 25)"/>
+  <!-- Heart -->
+  <path d="M28 24 Q29 22 30 24 Q31 22 32 24 Q30 26 28 24" fill="#dc2626" transform="rotate(5 30 24)"/>
+  <!-- Diamond -->
+  <path d="M37 26 L39 24 L41 26 L39 28 Z" fill="#dc2626" transform="rotate(20 39 26)"/>
+  <!-- Club -->
+  <circle cx="42" cy="26" r="1" fill="#000" transform="rotate(35 42 26)"/>
+  <circle cx="40" cy="27" r="1" fill="#000" transform="rotate(35 40 27)"/>
+  <circle cx="44" cy="27" r="1" fill="#000" transform="rotate(35 44 27)"/>
+  
+  <!-- Flourish elements -->
+  <path d="M10 45 Q30 38 50 45" stroke="rgba(255,255,255,0.8)" stroke-width="2" fill="none"/>
+  <path d="M15 40 Q30 35 45 40" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" fill="none"/>
+  <circle cx="12" cy="42" r="1.5" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="48" cy="42" r="1.5" fill="rgba(255,255,255,0.6)"/>
+</svg>
