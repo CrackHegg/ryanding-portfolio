@@ -21,7 +21,7 @@ export const Experience = () => {
                   Sparq Solutions
                 </a>
               </h4>
-              <p>Jun 2025 - Present</p>
+              <p>Jul 2025 - Present</p>
               <ul className={styles.historyItemBullets}>
                 <li>
                   Designed and implemented scalable TypeScript backend services and REST APIs (Bun/Express) 
@@ -61,7 +61,7 @@ export const Experience = () => {
                 <li>
                   Built a real-time 3D vision pipeline using RGB-D cameras (Orbbec Femto Bolt, Azure Kinect SDK), 
                   OpenCV, and Python to detect, segment, and track objects in dynamic kitchen environments 
-                  with ~85% accuracy in live deployment tests.
+                  for assistive robotics applications.
                 </li>
                 <li>
                   Advanced zero-shot detection and segmentation by integrating Grounded SAM2, achieving robust 
@@ -80,7 +80,7 @@ export const Experience = () => {
                 </li>
                 <li>
                   Annotated and curated datasets from usability studies, scaling pipeline across 4 kitchen 
-                  environments and achieving F1 score ~0.89. Co-first author on research paper submitted to ACM HRI.
+                  environments and achieving F1 score ~0.80. Co-first author on research paper submitted to ACM HRI.
                 </li>
               </ul>
             </div>
