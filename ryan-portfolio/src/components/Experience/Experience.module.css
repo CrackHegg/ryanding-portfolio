@@ -1,6 +1,7 @@
 @import "../../vars.css";
 
 .container {
+  --section-accent: var(--accent-experience);
   color: var(--color-text);
   padding: var(--section-margin) var(--section-padding) 0;
 }
@@ -11,9 +12,9 @@
 }
 
 .sectionHeader span {
-  color: var(--color-accent);
+  color: var(--section-accent);
   font-family: var(--font-family);
-  font-size: 13px;
+  font-size: var(--text-xs);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
 }
@@ -21,9 +22,9 @@
 .sectionHeader h2 {
   margin-top: 12px;
   color: var(--color-text);
-  font-family: var(--font-family);
-  font-size: clamp(30px, 4vw, 48px);
-  font-weight: var(--font-weight-black);
+  font-family: var(--font-display);
+  font-size: var(--text-section);
+  font-weight: 700;
   line-height: 1.08;
 }
 
@@ -73,13 +74,13 @@
 .cardIcon {
   display: grid;
   place-items: center;
-  color: var(--color-accent);
+  color: var(--section-accent);
 }
 
 .markerIcon {
   width: 34px;
   height: 34px;
-  border: 1px solid rgba(118, 245, 214, 0.24);
+  border: 1px solid rgba(124, 58, 237, 0.22);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.52);
   padding: 7px;
@@ -87,11 +88,11 @@
 
 .marker span,
 .signal {
-  border: 1px solid rgba(118, 245, 214, 0.28);
+  border: 1px solid rgba(124, 58, 237, 0.22);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.52);
-  color: var(--color-accent);
-  font-size: 12px;
+  color: var(--section-accent);
+  font-size: var(--text-xs);
   font-weight: var(--font-weight-bold);
   padding: 7px 10px;
   text-transform: uppercase;
@@ -102,6 +103,7 @@
   border: 1px solid var(--glass-border);
   border-radius: var(--glass-radius);
   background:
+    radial-gradient(circle at 4% 8%, rgba(124, 58, 237, 0.12), transparent 26%),
     linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.46)),
     rgba(255, 255, 255, 0.36);
   backdrop-filter: blur(26px) saturate(170%);
@@ -111,6 +113,16 @@
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
+.historyCard::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  border-radius: var(--glass-radius) 0 0 var(--glass-radius);
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.65), rgba(96, 165, 250, 0.34));
+  pointer-events: none;
+}
+
 .historyCard::before {
   content: "";
   position: absolute;
@@ -118,7 +130,7 @@
   left: -31px;
   width: 13px;
   height: 13px;
-  border: 2px solid var(--color-accent);
+  border: 2px solid var(--section-accent);
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 0 0 22px rgba(37, 99, 235, 0.22);
@@ -126,7 +138,7 @@
 
 .historyCard:hover {
   transform: translateY(-3px);
-  border-color: rgba(118, 245, 214, 0.38);
+  border-color: rgba(124, 58, 237, 0.3);
   background: rgba(255, 255, 255, 0.78);
 }
 
@@ -141,7 +153,7 @@
 .cardIcon {
   width: 52px;
   height: 52px;
-  border: 1px solid rgba(118, 245, 214, 0.24);
+  border: 1px solid rgba(124, 58, 237, 0.22);
   border-radius: var(--glass-radius-sm);
   background: rgba(20, 184, 166, 0.08);
 }
@@ -153,15 +165,15 @@
 
 .time {
   color: var(--color-secondary-muted);
-  font-family: "Roboto Mono", monospace;
-  font-size: 13px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
   margin-bottom: 8px;
 }
 
 .historyCard h3 {
   color: var(--color-text);
-  font-family: var(--font-family);
-  font-size: 25px;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
   line-height: 1.2;
   margin-bottom: 7px;
 }
@@ -169,7 +181,7 @@
 .historyCard h4 {
   color: var(--color-secondary);
   font-family: var(--font-family);
-  font-size: 17px;
+  font-size: var(--text-base);
   font-weight: var(--font-weight-semibold);
 }
 
@@ -179,7 +191,7 @@
 }
 
 .companyLink:hover {
-  color: var(--color-accent);
+  color: var(--section-accent);
   text-decoration: underline;
 }
 
@@ -194,7 +206,7 @@
 .historyItemBullets li {
   position: relative;
   color: var(--color-secondary);
-  font-size: 15px;
+  font-size: var(--text-sm);
   line-height: 1.58;
   padding-left: 18px;
 }
@@ -207,7 +219,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--color-accent);
+  background: var(--section-accent);
 }
 
 @media screen and (max-width: 760px) {

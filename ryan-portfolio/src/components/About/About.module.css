@@ -1,6 +1,7 @@
 @import "../../vars.css";
 
 .container {
+  --section-accent: var(--color-accent);
   position: relative;
   color: var(--color-text);
   padding: var(--section-margin) var(--section-padding) 0;
@@ -13,9 +14,9 @@
 
 .sectionHeader span,
 .kicker {
-  color: var(--color-accent);
+  color: var(--section-accent);
   font-family: var(--font-family);
-  font-size: 13px;
+  font-size: var(--text-xs);
   font-weight: var(--font-weight-bold);
   letter-spacing: 0;
   text-transform: uppercase;
@@ -24,9 +25,9 @@
 .sectionHeader h2 {
   margin-top: 12px;
   color: var(--color-text);
-  font-family: var(--font-family);
-  font-size: clamp(30px, 4vw, 48px);
-  font-weight: var(--font-weight-black);
+  font-family: var(--font-display);
+  font-size: var(--text-section);
+  font-weight: 700;
   line-height: 1.08;
   letter-spacing: 0;
 }
@@ -53,7 +54,7 @@
 .story p {
   color: var(--color-secondary);
   font-family: var(--font-family);
-  font-size: 18px;
+  font-size: var(--text-md);
   line-height: 1.72;
 }
 
@@ -99,7 +100,7 @@
 
 .focusCard:hover {
   transform: translateY(-3px);
-  border-color: rgba(118, 245, 214, 0.42);
+  border-color: rgba(20, 184, 166, 0.3);
   background: var(--glass-bg-strong);
 }
 
@@ -114,7 +115,7 @@
   border: 1px solid rgba(118, 245, 214, 0.44);
   border-radius: var(--glass-radius-sm);
   background: rgba(20, 184, 166, 0.08);
-  color: var(--color-accent);
+  color: var(--section-accent);
 }
 
 .focusIcon svg {
@@ -126,8 +127,8 @@
   position: relative;
   z-index: 1;
   color: var(--color-text);
-  font-family: var(--font-family);
-  font-size: 23px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
   margin-bottom: 12px;
 }
 
@@ -135,7 +136,7 @@
   position: relative;
   z-index: 1;
   color: var(--color-secondary);
-  font-size: 15px;
+  font-size: var(--text-sm);
   line-height: 1.6;
 }
 
@@ -146,7 +147,8 @@
 .interests h3 {
   margin-top: 10px;
   color: var(--color-text);
-  font-size: 28px;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
 }
 
 .interests ul {
@@ -163,7 +165,7 @@
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.48);
   color: var(--color-secondary);
-  font-size: 14px;
+  font-size: var(--text-sm);
   font-weight: var(--font-weight-semibold);
   line-height: 1.35;
   padding: 9px 12px;

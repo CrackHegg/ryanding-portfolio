@@ -10,8 +10,8 @@ const experiences = [
     signal: "Incoming",
     icon: Car,
     bullets: [
-      "Joining the AV Simulation Core team to work on autonomous vehicle simulation infrastructure and AI/ML systems.",
-      "Focused on tooling that supports evaluation, scenario generation, and reliability for autonomy stacks.",
+      "Incoming on AV Simulation Core, focused on evaluation and simulation infrastructure.",
+      "Working near the systems layer that helps autonomy stacks fail earlier and more measurably.",
     ],
   },
   {
@@ -22,9 +22,9 @@ const experiences = [
     signal: "Research",
     icon: Microscope,
     bullets: [
-      "Built a real-time RGB-D vision pipeline with OpenCV, Python, and Grounded SAM2 for dynamic kitchen object detection, segmentation, and tracking.",
-      "Improved segmentation precision by 25% and reduced false detections by 30% with zero-shot detection and tracking refinements.",
-      "Designed occlusion-robust 3D localization and LLM spatial validation, reducing invalid object placements by up to 40%; curated datasets across 4 kitchens with F1 around 0.89.",
+      "Built real-time RGB-D object detection, segmentation, and tracking for assistive robotics.",
+      "Integrated Grounded SAM2, improving precision by 25% and cutting false detections by 30%.",
+      "Added 3D localization and LLM spatial validation, reducing invalid placements by up to 40%.",
     ],
   },
   {
@@ -34,8 +34,8 @@ const experiences = [
     signal: "Teaching",
     icon: GraduationCap,
     bullets: [
-      "Conducted recitations for 100+ students across search, probabilistic reasoning, decision-making, and reinforcement learning.",
-      "Led office hours and helped design programming assignments and exams aligned with core AI concepts.",
+      "Teach 100+ students core AI topics: search, probability, decisions, and reinforcement learning.",
+      "Lead recitations, office hours, assignments, and exam support.",
     ],
   },
   {
@@ -46,9 +46,9 @@ const experiences = [
     signal: "Product",
     icon: ServerCog,
     bullets: [
-      "Built TypeScript backend services and REST APIs integrated with PostgreSQL for production content automation workflows.",
-      "Engineered ETL pipelines and LLM text-generation modules connected to publishing APIs, reducing manual curation overhead.",
-      "Developed modular data access layers, file workflows, and n8n automation integrations within Agile sprints.",
+      "Built TypeScript REST services, PostgreSQL workflows, and production automation tooling.",
+      "Integrated ETL pipelines and LLM generation modules with publishing APIs.",
+      "Shipped modular data layers, file workflows, and n8n automations.",
     ],
   },
 ];

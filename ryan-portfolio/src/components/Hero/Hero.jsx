@@ -10,21 +10,33 @@ const identityTags = [
   "Full-Stack AI",
 ];
 
+const roleHighlights = [
+  "Incoming AI/ML SWE Intern @ Cruise",
+  "Research Assistant @ CMU RASL",
+  "TA for Concepts in AI",
+  "Pittsburgh, PA",
+];
+
 const pipelineStages = ["RGB-D", "Detect", "Track", "Reason", "Act"];
 
 export const Hero = () => {
   return (
     <section className={styles.container} id="home" aria-labelledby="hero-title">
       <div className={styles.content}>
-        <p className={styles.eyebrow}>Ryan Ding · B.S. Artificial Intelligence @ Carnegie Mellon</p>
-        <h1 id="hero-title" className={styles.title}>
-          Building reliable AI systems for robotics, perception, and autonomy.
-        </h1>
+        <p className={styles.eyebrow}>AI systems · Robotics · Perception</p>
+        <h1 id="hero-title" className={styles.title}>Ryan Ding</h1>
+        <p className={styles.identity}>B.S. Artificial Intelligence @ Carnegie Mellon University</p>
+        <p className={styles.heroLine}>Building reliable AI systems for robotics, perception, and autonomy.</p>
         <p className={styles.description}>
-          I work across computer vision, autonomous systems, LLM/VLM reasoning, and
-          full-stack AI infrastructure, turning research ideas into systems that can
-          sense, reason, and operate in the world.
+          I build across computer vision, autonomous systems, LLM/VLM reasoning,
+          and full-stack AI infrastructure.
         </p>
+
+        <ul className={styles.roles} aria-label="Current roles">
+          {roleHighlights.map((role) => (
+            <li key={role}>{role}</li>
+          ))}
+        </ul>
 
         <ul className={styles.tags} aria-label="Technical focus areas">
           {identityTags.map((tag) => (

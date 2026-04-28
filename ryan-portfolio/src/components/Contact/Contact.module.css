@@ -1,6 +1,7 @@
 @import "../../vars.css";
 
 .container {
+  --section-accent: var(--accent-contact);
   position: relative;
   color: var(--color-text);
   margin: var(--section-margin) var(--section-padding) 40px;
@@ -46,9 +47,9 @@
 
 .text h2 {
   color: var(--color-text);
-  font-family: var(--font-family);
-  font-size: clamp(30px, 4vw, 44px);
-  font-weight: var(--font-weight-black);
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.4vw, 2.85rem);
+  font-weight: 700;
   line-height: 1.08;
   margin-bottom: 12px;
 }
@@ -56,7 +57,7 @@
 .text p {
   color: var(--color-secondary);
   font-family: var(--font-family);
-  font-size: 17px;
+  font-size: var(--text-base);
   font-weight: var(--font-weight-medium);
   line-height: 1.55;
   margin: 0;
@@ -90,7 +91,7 @@
 
 .link a:hover {
   transform: translateY(-3px);
-  border-color: rgba(118, 245, 214, 0.36);
+  border-color: rgba(51, 65, 85, 0.22);
   background: rgba(255, 255, 255, 0.82);
 }
 
@@ -99,10 +100,10 @@
   place-items: center;
   width: 42px;
   height: 42px;
-  border: 1px solid rgba(118, 245, 214, 0.22);
+  border: 1px solid rgba(51, 65, 85, 0.18);
   border-radius: 14px;
   background: rgba(20, 184, 166, 0.08);
-  color: var(--color-accent);
+  color: var(--section-accent);
   flex-shrink: 0;
 }
 
@@ -123,13 +124,13 @@
 
 .link strong {
   color: var(--color-text);
-  font-size: 14px;
+  font-size: var(--text-sm);
   margin-bottom: 3px;
 }
 
 .link small {
   color: var(--color-secondary);
-  font-size: 12px;
+  font-size: var(--text-xs);
 }
 
 .location {
@@ -147,7 +148,7 @@
 .location p {
   color: var(--color-secondary);
   font-family: var(--font-family);
-  font-size: 14px;
+  font-size: var(--text-sm);
   font-weight: var(--font-weight-medium);
   margin: 0;
 }

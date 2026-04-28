@@ -16,9 +16,9 @@
 
 .title {
     position: relative;
-    font-family: var(--font-family);
-    font-size: 20px;
-    font-weight: var(--font-weight-black);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
     text-decoration: none;
     color: var(--color-text);
 }
@@ -64,7 +64,7 @@
     border-radius: 999px;
     padding: 0 12px;
     font-family: var(--font-family);
-    font-size: 14px;
+    font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
     color: var(--color-secondary);
     text-decoration: none;
@@ -127,7 +127,7 @@
     .menuItems a {
         justify-content: flex-end;
         min-height: 40px;
-        font-size: 15px;
+        font-size: var(--text-sm);
     }
 
     .menuOpen {
