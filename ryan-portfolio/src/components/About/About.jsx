@@ -1,47 +1,83 @@
-import React from "react";
-
+import { BrainCircuit, Camera, Route } from "lucide-react";
 import styles from "./About.module.css";
-import { getImageUrl } from "../../utils";
+
+const researchInterests = [
+  "robust perception under distribution shift",
+  "3D vision and object tracking",
+  "autonomous robotics systems",
+  "simulation and evaluation for AVs",
+  "LLM/VLM reasoning for embodied AI",
+  "AI infrastructure and backend systems",
+];
+
+const focusCards = [
+  {
+    title: "Perception",
+    text: "Building vision systems that turn noisy RGB-D streams into usable state: detections, tracks, object permanence, and spatial context.",
+    icon: Camera,
+  },
+  {
+    title: "Reasoning",
+    text: "Connecting learned perception with LLM/VLM reasoning so systems can interpret scenes, constraints, goals, and failure modes.",
+    icon: BrainCircuit,
+  },
+  {
+    title: "Action",
+    text: "Designing the infrastructure around models: simulation, evaluation, backend services, and feedback loops that make autonomy measurable.",
+    icon: Route,
+  },
+];
 
 export const About = () => {
   return (
     <section className={styles.container} id="about">
-      <h2 className={styles.title}>About</h2>
+      <div className={styles.sectionHeader}>
+        <span>About</span>
+        <h2>Curious about systems that close the loop from perception to action.</h2>
+      </div>
+
       <div className={styles.content}>
-        <ul className={styles.aboutItems}>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/serverIcon.svg")} alt="Server icon" />
-            <div className={styles.aboutItemText}>
-              <h3>Incoming AI/ML Intern @ Cruise</h3>
-              <p>
-                Joining Cruise's AV Simulation Core team in Summer 2026 to work on
-                autonomous vehicle systems infrastructure and simulation at scale.
-              </p>
-            </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.svg")} alt="Research icon" />
-            <div className={styles.aboutItemText}>
-              <h3>CV & Robotics Researcher</h3>
-              <p>
-                Research Assistant at CMU's Reliable Autonomous Systems Lab, building
-                real-time 3D vision pipelines, zero-shot object detection with Grounded SAM2,
-                and LLM-based spatial reasoning for assistive robotics.
-              </p>
-            </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/uiIcon.svg")} alt="Education icon" />
-            <div className={styles.aboutItemText}>
-              <h3>B.S. Artificial Intelligence @ CMU</h3>
-              <p>
-                Dean's List student at Carnegie Mellon studying AI, with coursework spanning
-                deep learning, computer vision, autonomous agents, and generative AI.
-                Also a Teaching Assistant for Concepts in AI.
-              </p>
-            </div>
-          </li>
-        </ul>
+        <div className={styles.story}>
+          <p>
+            I am Ryan Ding, a B.S. Artificial Intelligence student at Carnegie Mellon
+            University building at the intersection of machine learning, computer vision,
+            robotics, autonomous systems, and AI infrastructure.
+          </p>
+          <p>
+            The through-line in my work is making intelligent systems more reliable:
+            perception that can survive messy environments, reasoning that can inspect
+            context, and infrastructure that helps models become useful products and
+            research tools.
+          </p>
+        </div>
+
+        <div className={styles.focusGrid} aria-label="Perception reasoning action focus">
+          {focusCards.map((item) => {
+            const Icon = item.icon;
+
+            return (
+            <article className={styles.focusCard} key={item.title}>
+              <div className={styles.focusIcon} aria-hidden="true">
+                <Icon strokeWidth={1.8} />
+              </div>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+            );
+          })}
+        </div>
+
+        <aside className={styles.interests} aria-labelledby="interests-title">
+          <div>
+            <span className={styles.kicker}>Currently exploring</span>
+            <h3 id="interests-title">Research interests</h3>
+          </div>
+          <ul>
+            {researchInterests.map((interest) => (
+              <li key={interest}>{interest}</li>
+            ))}
+          </ul>
+        </aside>
       </div>
     </section>
   );

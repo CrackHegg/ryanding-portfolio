@@ -1,118 +1,191 @@
 @import "../../vars.css";
 
 .container {
+  position: relative;
   color: var(--color-text);
-  margin-top: var(--section-margin);
-  margin-left: var(--section-padding);
-  margin-right: var(--section-padding);
+  padding: var(--section-margin) var(--section-padding) 0;
 }
 
-.title {
+.sectionHeader {
+  max-width: 900px;
+  margin-bottom: 36px;
+}
+
+.sectionHeader span,
+.kicker {
+  color: var(--color-accent);
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.sectionHeader h2 {
+  margin-top: 12px;
   color: var(--color-text);
   font-family: var(--font-family);
-  font-size: 35px;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 37px;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: var(--font-weight-black);
+  line-height: 1.08;
+  letter-spacing: 0;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.aboutItems {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  width: 100%;
-  max-width: 1200px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
+  gap: 24px;
+  align-items: stretch;
 }
 
-.aboutItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: var(--card-padding);
-  border-radius: var(--card-border-radius);
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  transition: all 0.3s ease;
+.story {
+  border: 1px solid var(--glass-border);
+  border-radius: var(--glass-radius);
+  background:
+    linear-gradient(135deg, var(--glass-bg-strong), rgba(255, 255, 255, 0.03)),
+    radial-gradient(circle at 18% 18%, rgba(118, 245, 214, 0.12), transparent 30%);
+  backdrop-filter: blur(24px);
+  box-shadow: var(--glass-shadow);
+  padding: 32px;
 }
 
-.aboutItem:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.aboutItem img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
-  object-fit: contain;
-}
-
-.aboutItemText h3 {
-  color: var(--color-text);
-  font-family: var(--font-family);
-  font-size: 24px;
-  font-weight: var(--font-weight-bold);
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--color-primary);
-}
-
-.aboutItemText p {
+.story p {
   color: var(--color-secondary);
   font-family: var(--font-family);
-  font-size: 16px;
-  font-weight: var(--font-weight-medium);
-  line-height: 1.6;
-  margin: 0;
+  font-size: 18px;
+  line-height: 1.72;
 }
 
-@media screen and (max-width: 830px) {
-  .container {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
+.story p + p {
+  margin-top: 18px;
+}
 
-  .title {
-    font-size: 28px;
-  }
+.focusGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1 / -1;
+  gap: 16px;
+}
 
-  .aboutItems {
+.focusCard,
+.interests {
+  border: 1px solid var(--glass-border);
+  border-radius: var(--glass-radius);
+  background: var(--glass-bg);
+  backdrop-filter: blur(22px);
+  box-shadow: var(--glass-shadow);
+}
+
+.focusCard {
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.focusCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.focusCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(118, 245, 214, 0.42);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.focusIcon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(118, 245, 214, 0.44);
+  border-radius: var(--glass-radius-sm);
+  background: rgba(118, 245, 214, 0.08);
+  color: var(--color-accent);
+}
+
+.focusIcon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.focusCard h3 {
+  position: relative;
+  z-index: 1;
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.focusCard p {
+  position: relative;
+  z-index: 1;
+  color: var(--color-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.interests {
+  padding: 30px;
+}
+
+.interests h3 {
+  margin-top: 10px;
+  color: var(--color-text);
+  font-size: 28px;
+}
+
+.interests ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.interests li {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-secondary);
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.35;
+  padding: 9px 12px;
+}
+
+@media screen and (max-width: 980px) {
+  .content {
     grid-template-columns: 1fr;
-    gap: 25px;
   }
 
-  .aboutItem {
-    padding: 25px;
+  .focusGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
-  .aboutItem img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
-  }
-
-  .aboutItemText h3 {
-    font-size: 20px;
-    margin-bottom: 12px;
-  }
-
-  .aboutItemText p {
-    font-size: 14px;
-    line-height: 1.5;
+  .story,
+  .interests,
+  .focusCard {
+    padding: 22px;
   }
 }

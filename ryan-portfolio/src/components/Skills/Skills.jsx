@@ -1,118 +1,62 @@
-import React from "react";
+import { BrainCircuit, Code2, Database, Eye, Wrench } from "lucide-react";
 import styles from "./Skills.module.css";
-import { getImageUrl } from "../../utils";
+
+const skillGroups = [
+  {
+    title: "ML / AI",
+    icon: BrainCircuit,
+    skills: ["PyTorch", "HuggingFace", "LangChain", "GPT-4o", "LLM/VLM prompting"],
+  },
+  {
+    title: "Computer Vision / Robotics",
+    icon: Eye,
+    skills: ["OpenCV", "ROS", "Grounded SAM2", "RGB-D cameras", "Roboflow"],
+  },
+  {
+    title: "Backend / Systems",
+    icon: Database,
+    skills: ["FastAPI", "TypeScript", "REST APIs", "PostgreSQL", "RabbitMQ", "SQLite", "AWS EC2"],
+  },
+  {
+    title: "Languages",
+    icon: Code2,
+    skills: ["Python", "C", "C++", "Java", "TypeScript", "SQL", "SML", "R"],
+  },
+  {
+    title: "Tools",
+    icon: Wrench,
+    skills: ["Git", "n8n", "React"],
+  },
+];
 
 export const Skills = () => {
   return (
     <section className={styles.container} id="skills">
-      <h2 className={styles.title}>Skills</h2>
+      <div className={styles.sectionHeader}>
+        <span>Skills</span>
+        <h2>Tools I use to build learning systems, robotics pipelines, and product infrastructure.</h2>
+      </div>
       <div className={styles.content}>
         <div className={styles.skillsGrid}>
-          <div className={styles.skillCategory}>
-            <h3 className={styles.categoryTitle}>Programming Languages</h3>
-            <div className={styles.skillItems}>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/python.svg")} alt="Python" />
-                <p>Python</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/javascript.svg")} alt="JavaScript" />
-                <p>JavaScript</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/typescript.svg")} alt="TypeScript" />
-                <p>TypeScript</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/java.svg")} alt="Java" />
-                <p>Java</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/c.svg")} alt="C" />
-                <p>C</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/cpp.svg")} alt="C++" />
-                <p>C++</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/r.svg")} alt="R" />
-                <p>R</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/sql.svg")} alt="SQL" />
-                <p>SQL</p>
-              </div>
-            </div>
-          </div>
+          {skillGroups.map((group) => {
+            const Icon = group.icon;
 
-          <div className={styles.skillCategory}>
-            <h3 className={styles.categoryTitle}>AI/ML & Computer Vision</h3>
-            <div className={styles.skillItems}>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/pytorch.svg")} alt="PyTorch" />
-                <p>PyTorch</p>
+            return (
+            <article className={styles.skillCategory} key={group.title}>
+              <div className={styles.categoryHeader}>
+                <div className={styles.categoryIcon} aria-hidden="true">
+                  <Icon strokeWidth={1.8} />
+                </div>
+                <h3 className={styles.categoryTitle}>{group.title}</h3>
               </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/opencv.svg")} alt="OpenCV" />
-                <p>OpenCV</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/huggingface.svg")} alt="HuggingFace" />
-                <p>HuggingFace</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/langchain.svg")} alt="LangChain" />
-                <p>LangChain</p>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.skillCategory}>
-            <h3 className={styles.categoryTitle}>Backend & Web</h3>
-            <div className={styles.skillItems}>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/react.svg")} alt="React" />
-                <p>React</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/html.svg")} alt="HTML" />
-                <p>HTML</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/rest.svg")} alt="REST API" />
-                <p>REST API</p>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.skillCategory}>
-            <h3 className={styles.categoryTitle}>Robotics & Systems</h3>
-            <div className={styles.skillItems}>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/ros.svg")} alt="ROS" />
-                <p>ROS</p>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.skillCategory}>
-            <h3 className={styles.categoryTitle}>Tools & Platforms</h3>
-            <div className={styles.skillItems}>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/git.svg")} alt="Git" />
-                <p>Git</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/aws.svg")} alt="AWS" />
-                <p>AWS EC2</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/n8n.svg")} alt="n8n" />
-                <p>n8n</p>
-              </div>
-            </div>
-          </div>
+              <ul className={styles.skillItems}>
+                {group.skills.map((skill) => (
+                  <li className={styles.skillItem} key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </article>
+            );
+          })}
         </div>
       </div>
     </section>

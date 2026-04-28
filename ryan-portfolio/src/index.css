@@ -2,9 +2,26 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Outfit", Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+  background: var(--color-bg);
+}
+
+body {
+  min-width: 320px;
+  background: var(--color-bg);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: rgba(118, 245, 214, 0.28);
+  color: var(--color-text);
+}

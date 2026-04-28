@@ -1,17 +1,110 @@
-import React from "react";
-
+import { ArrowRight, Code2, FileText, Users } from "lucide-react";
 import styles from "./Hero.module.css";
-import { getImageUrl } from "../../utils";
+
+const identityTags = [
+  "CMU AI",
+  "Computer Vision",
+  "Robotics",
+  "Autonomous Systems",
+  "LLM/VLM Reasoning",
+  "Full-Stack AI",
+];
+
+const pipelineStages = ["RGB-D", "Detect", "Track", "Reason", "Act"];
 
 export const Hero = () => {
-    return <section className={styles.container}>
-        <div className={styles.content}>
-            <h1 className={styles.title}>Hi, I'm Ryan</h1>
-            <p className={styles.description}>AI student at Carnegie Mellon building at the intersection of computer vision, autonomous systems, and LLM reasoning. Incoming AI/ML Intern at Cruise — passionate about shipping systems that actually work in the real world.</p>
-            <a href="mailto:ryanwding@gmail.com" className={styles.contactBtn}>Contact Me</a>
+  return (
+    <section className={styles.container} id="home" aria-labelledby="hero-title">
+      <div className={styles.content}>
+        <p className={styles.eyebrow}>Ryan Ding · B.S. Artificial Intelligence @ Carnegie Mellon</p>
+        <h1 id="hero-title" className={styles.title}>
+          Building reliable AI systems for robotics, perception, and autonomy.
+        </h1>
+        <p className={styles.description}>
+          I work across computer vision, autonomous systems, LLM/VLM reasoning, and
+          full-stack AI infrastructure, turning research ideas into systems that can
+          sense, reason, and operate in the world.
+        </p>
+
+        <ul className={styles.tags} aria-label="Technical focus areas">
+          {identityTags.map((tag) => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
+
+        <div className={styles.actions} aria-label="Primary links">
+          <a href="#projects" className={styles.primaryBtn}>
+            View Projects
+            <ArrowRight aria-hidden="true" size={18} strokeWidth={2} />
+          </a>
+          <a
+            href="/Ryan_Ding_Resume.pdf"
+            className={styles.secondaryBtn}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FileText aria-hidden="true" size={17} strokeWidth={2} />
+            View Resume
+          </a>
+          <a
+            href="https://github.com/CrackHegg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.secondaryBtn}
+          >
+            <Code2 aria-hidden="true" size={17} strokeWidth={2} />
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ryan-ding-2a8987273/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.secondaryBtn}
+          >
+            <Users aria-hidden="true" size={17} strokeWidth={2} />
+            LinkedIn
+          </a>
         </div>
-        <img src = {getImageUrl("hero/heroIcon.png")} alt="Ryan's Hero Image" className={styles.heroImg}/>
-        <div className={styles.topBlur}></div>
-        <div className={styles.bottomBlur}></div>
-    </section>;
-}
+      </div>
+
+      <div className={styles.visual} aria-label="Abstract robotics perception pipeline">
+        <div className={styles.visualHeader}>
+          <span>perception_runtime.py</span>
+          <span className={styles.status}>tracking</span>
+        </div>
+        <div className={styles.sensorPanel}>
+          <div className={styles.scanLine}></div>
+          <div className={`${styles.box} ${styles.boxPrimary}`}>
+            <span>mug · 0.94</span>
+          </div>
+          <div className={`${styles.box} ${styles.boxSecondary}`}>
+            <span>bowl · 0.87</span>
+          </div>
+          <div className={`${styles.box} ${styles.boxTertiary}`}>
+            <span>hand · 0.79</span>
+          </div>
+          <div className={styles.pointCloud}>
+            {Array.from({ length: 18 }).map((_, index) => (
+              <span key={index}></span>
+            ))}
+          </div>
+        </div>
+
+        <div className={styles.pipeline}>
+          {pipelineStages.map((stage, index) => (
+            <div className={styles.stage} key={stage}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{stage}</strong>
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.telemetry}>
+          <span>F1 0.89</span>
+          <span>+25% precision</span>
+          <span>-30% false detections</span>
+        </div>
+      </div>
+    </section>
+  );
+};

@@ -1,14 +1,21 @@
 :root {
     /* Colours */
-    --color-text: #ffffff;
-    --color-primary: #576cbc;
-    --color-secondary: #b8c5ea;
-    --color-secondary-muted: #8a9bc7;
-    --color-dark: #0b2447;
-    --color-bg: #04152d;
-    --color-card-bg: rgba(255, 255, 255, 0.08);
-    --color-card-border: rgba(255, 255, 255, 0.15);
-    --color-card-hover: rgba(255, 255, 255, 0.12);
+    --color-text: #f7fbff;
+    --color-primary: #7f95ff;
+    --color-accent: #76f5d6;
+    --color-secondary: #b9c6df;
+    --color-secondary-muted: #7f8da8;
+    --color-dark: #101a2f;
+    --color-bg: #070b14;
+    --color-card-bg: rgba(255, 255, 255, 0.065);
+    --color-card-border: rgba(209, 224, 255, 0.16);
+    --color-card-hover: rgba(255, 255, 255, 0.095);
+    --glass-bg: rgba(255, 255, 255, 0.075);
+    --glass-bg-strong: rgba(255, 255, 255, 0.11);
+    --glass-border: rgba(231, 239, 255, 0.2);
+    --glass-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+    --glass-radius: 24px;
+    --glass-radius-sm: 16px;
 
     /* Typography */
     --font-family: "Roboto", "Arial", sans-serif;
@@ -19,8 +26,8 @@
     --font-weight-black: 900;
 
     /* Spacing */
-    --section-margin: 79px;
+    --section-margin: 96px;
     --section-padding: 10%;
     --card-padding: 30px;
-    --card-border-radius: 15px;
+    --card-border-radius: var(--glass-radius);
 }

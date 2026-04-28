@@ -1,26 +1,25 @@
-import React, {useState} from "react";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 import styles from "./Navbar.module.css";
-import { getImageUrl } from "../../utils";
 
 export const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
     <nav className ={styles.navbar}>
-        <a className={styles.title} href="/">
-            Portfolio
+        <a className={styles.title} href="#home">
+            Ryan Ding
         </a>
         <div className ={styles.menu}>
-            <img
+            <button
                 className={styles.menuBtn}
-                src={
-                    menuOpen
-                    ? getImageUrl("nav/closeIcon.png")
-                    : getImageUrl("nav/menuIcon.png")
-                }
-                alt="menu-button"
+                type="button"
+                aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+                aria-expanded={menuOpen}
                 onClick={() => setMenuOpen(!menuOpen)}
-                />
+            >
+                {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+            </button>
             <ul className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
                 onClick={() => setMenuOpen(false)}>
                 <li>
