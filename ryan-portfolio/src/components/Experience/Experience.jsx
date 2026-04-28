@@ -10,6 +10,29 @@ export const Experience = () => {
         <ul className={styles.history}>
           <li className={styles.historyItem}>
             <img
+              src={getImageUrl("history/cruise.png")}
+              alt="Cruise"
+              className={styles.historyItemImage}
+            />
+            <div className={styles.historyItemDetails}>
+              <h3>AI/ML Software Engineer Intern</h3>
+              <h4>
+                <a href="https://getcruise.com" target="_blank" rel="noopener noreferrer" className={styles.companyLink}>
+                  Cruise
+                </a>
+              </h4>
+              <p>May 2026 – Aug 2026</p>
+              <ul className={styles.historyItemBullets}>
+                <li>
+                  Incoming intern on the AV Simulation Core team, working on autonomous vehicle
+                  simulation infrastructure and AI/ML systems.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li className={styles.historyItem}>
+            <img
               src={getImageUrl("history/sparq.svg")}
               alt="Sparq Solutions"
               className={styles.historyItemImage}
@@ -21,23 +44,19 @@ export const Experience = () => {
                   Sparq Solutions
                 </a>
               </h4>
-              <p>Jul 2025 - Present</p>
+              <p>Jul 2025 – Dec 2025</p>
               <ul className={styles.historyItemBullets}>
                 <li>
-                  Designed and implemented scalable TypeScript backend services and REST APIs (Bun/Express) 
-                  integrated with n8n and PostgreSQL, automating content workflows and reducing manual engineering steps.
+                  Built scalable TypeScript backend services and REST APIs integrated with PostgreSQL,
+                  automating content workflows and reducing manual engineering overhead.
                 </li>
                 <li>
-                  Integrated LLM-based text generation modules with publishing APIs, cutting human content 
-                  curation time for production clients.
+                  Engineered fault-tolerant ETL pipelines and integrated LLM-based text generation
+                  modules with publishing APIs, cutting human content curation time for production clients.
                 </li>
                 <li>
-                  Engineered fault-tolerant ETL pipelines with schema migration tools, error tracking, 
-                  and automated rollback, improving system uptime.
-                </li>
-                <li>
-                  Authored onboarding docs, API docs, and runbooks; collaborated with other teams to deliver 
-                  features within Agile sprints and meet SLA performance targets.
+                  Developed modular data access layers, file management workflows, and automation
+                  integrations using n8n within Agile sprints.
                 </li>
               </ul>
             </div>
@@ -50,37 +69,28 @@ export const Experience = () => {
               className={styles.historyItemImage}
             />
             <div className={styles.historyItemDetails}>
-              <h3>Software Research Intern</h3>
+              <h3>Research Assistant</h3>
               <h4>
                 <a href="https://github.com/CMU-RASL" target="_blank" rel="noopener noreferrer" className={styles.companyLink}>
                   CMU Reliable Autonomous Systems Laboratory
                 </a>
               </h4>
-              <p>May 2024 - Present</p>
+              <p>May 2024 – Present</p>
               <ul className={styles.historyItemBullets}>
                 <li>
-                  Built a real-time 3D vision pipeline using RGB-D cameras (Orbbec Femto Bolt, Azure Kinect SDK), 
-                  OpenCV, and Python to detect, segment, and track objects in dynamic kitchen environments 
-                  for assistive robotics applications.
+                  Built a real-time 3D vision pipeline using RGB-D cameras, OpenCV, and Python to detect,
+                  segment, and track objects in dynamic kitchen environments for assistive robotics.
+                  Integrated Grounded SAM2 for zero-shot detection, improving segmentation precision by 25%
+                  and reducing false detections by 30%.
                 </li>
                 <li>
-                  Advanced zero-shot detection and segmentation by integrating Grounded SAM2, achieving robust 
-                  open-vocabulary object detection with pixel-level masks. Optimized prompt/threshold tuning to 
-                  reduce false positives and false negatives across cluttered real-world kitchens, improving 
-                  segmentation precision by 25% and reducing false detections by 30%.
+                  Designed occlusion-robust tracking and 3D item localization for object permanence and
+                  world-coordinate mapping, and used LLM-based spatial reasoning for contextual item-placement
+                  validation — reducing invalid placements by up to 40%.
                 </li>
                 <li>
-                  Designed an occlusion-robust tracking algorithm and 3D item localization system, achieving 
-                  object permanence and enabling accurate world-coordinate mapping across varied kitchen layouts 
-                  via registration procedures.
-                </li>
-                <li>
-                  Leveraged LLM-based spatial reasoning for contextual validation of item placement, adding a 
-                  safety/risk assessment layer to raw detection, reducing invalid object placements by 40%.
-                </li>
-                <li>
-                  Annotated and curated datasets from usability studies, scaling pipeline across 4 kitchen 
-                  environments and achieving F1 score ~0.80. Co-first author on research paper submitted to ACM HRI.
+                  Annotated and curated datasets from usability studies across 4 kitchen environments,
+                  achieving ~0.89 F1 score. Co-first author on research paper submitted to ACM HRI.
                 </li>
               </ul>
             </div>
@@ -93,12 +103,12 @@ export const Experience = () => {
               className={styles.historyItemImage}
             />
             <div className={styles.historyItemDetails}>
-              <h3>Teaching Assistant for 07-180 Concepts in A.I.</h3>
+              <h3>Teaching Assistant — 07-180 Concepts in A.I.</h3>
               <h4>CMU School of Computer Science</h4>
-              <p>Jan 2025 - May 2025</p>
+              <p>Jan 2025 – Present</p>
               <ul className={styles.historyItemBullets}>
                 <li>
-                  Conducted recitations for 100+ students covering search, probabilistic reasoning, 
+                  Conducted recitations for 100+ students covering search, probabilistic reasoning,
                   decision-making, and reinforcement learning.
                 </li>
                 <li>

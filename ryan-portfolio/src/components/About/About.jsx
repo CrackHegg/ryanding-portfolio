@@ -12,30 +12,32 @@ export const About = () => {
           <li className={styles.aboutItem}>
             <img src={getImageUrl("about/serverIcon.svg")} alt="Server icon" />
             <div className={styles.aboutItemText}>
-              <h3>Full Stack AI Developer</h3>
+              <h3>Incoming AI/ML Intern @ Cruise</h3>
               <p>
-                Currently working at Sparq Solutions building scalable TypeScript backend services, 
-                REST APIs, and integrating LLM-based solutions for production clients.
+                Joining Cruise's AV Simulation Core team in Summer 2026 to work on
+                autonomous vehicle systems infrastructure and simulation at scale.
               </p>
             </div>
           </li>
           <li className={styles.aboutItem}>
             <img src={getImageUrl("about/cursorIcon.svg")} alt="Research icon" />
             <div className={styles.aboutItemText}>
-              <h3>AI Research Intern</h3>
+              <h3>CV & Robotics Researcher</h3>
               <p>
-                Building real-time 3D vision pipelines at CMU's Reliable Autonomous Systems Lab, 
-                working with computer vision, object detection, and spatial reasoning systems.
+                Research Assistant at CMU's Reliable Autonomous Systems Lab, building
+                real-time 3D vision pipelines, zero-shot object detection with Grounded SAM2,
+                and LLM-based spatial reasoning for assistive robotics.
               </p>
             </div>
           </li>
           <li className={styles.aboutItem}>
             <img src={getImageUrl("about/uiIcon.svg")} alt="Education icon" />
             <div className={styles.aboutItemText}>
-              <h3>CS + AI Student</h3>
+              <h3>B.S. Artificial Intelligence @ CMU</h3>
               <p>
-                Junior at Carnegie Mellon studying Computer Science and Artificial Intelligence, 
-                with a 3.65 GPA and Dean's List recognition. Teaching Assistant for Concepts in AI.
+                Dean's List student at Carnegie Mellon studying AI, with coursework spanning
+                deep learning, computer vision, autonomous agents, and generative AI.
+                Also a Teaching Assistant for Concepts in AI.
               </p>
             </div>
           </li>

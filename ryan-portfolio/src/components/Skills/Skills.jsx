@@ -47,7 +47,7 @@ export const Skills = () => {
           </div>
 
           <div className={styles.skillCategory}>
-            <h3 className={styles.categoryTitle}>AI/ML & Data Science</h3>
+            <h3 className={styles.categoryTitle}>AI/ML & Computer Vision</h3>
             <div className={styles.skillItems}>
               <div className={styles.skillItem}>
                 <img src={getImageUrl("skills/pytorch.svg")} alt="PyTorch" />
@@ -69,7 +69,7 @@ export const Skills = () => {
           </div>
 
           <div className={styles.skillCategory}>
-            <h3 className={styles.categoryTitle}>Web Development</h3>
+            <h3 className={styles.categoryTitle}>Backend & Web</h3>
             <div className={styles.skillItems}>
               <div className={styles.skillItem}>
                 <img src={getImageUrl("skills/react.svg")} alt="React" />
@@ -87,6 +87,16 @@ export const Skills = () => {
           </div>
 
           <div className={styles.skillCategory}>
+            <h3 className={styles.categoryTitle}>Robotics & Systems</h3>
+            <div className={styles.skillItems}>
+              <div className={styles.skillItem}>
+                <img src={getImageUrl("skills/ros.svg")} alt="ROS" />
+                <p>ROS</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.skillCategory}>
             <h3 className={styles.categoryTitle}>Tools & Platforms</h3>
             <div className={styles.skillItems}>
               <div className={styles.skillItem}>
@@ -96,14 +106,6 @@ export const Skills = () => {
               <div className={styles.skillItem}>
                 <img src={getImageUrl("skills/aws.svg")} alt="AWS" />
                 <p>AWS EC2</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/gcp.svg")} alt="GCP" />
-                <p>GCP</p>
-              </div>
-              <div className={styles.skillItem}>
-                <img src={getImageUrl("skills/ros.svg")} alt="ROS" />
-                <p>ROS</p>
               </div>
               <div className={styles.skillItem}>
                 <img src={getImageUrl("skills/n8n.svg")} alt="n8n" />
