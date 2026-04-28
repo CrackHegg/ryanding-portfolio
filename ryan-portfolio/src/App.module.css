@@ -4,10 +4,10 @@
     position: relative;
     min-height: 100vh;
     background:
-        radial-gradient(ellipse at 18% 8%, rgba(127, 149, 255, 0.18), transparent 32%),
-        radial-gradient(ellipse at 86% 16%, rgba(118, 245, 214, 0.11), transparent 30%),
-        radial-gradient(ellipse at 50% 72%, rgba(255, 255, 255, 0.045), transparent 42%),
-        linear-gradient(180deg, #070b14 0%, #0b1220 48%, #070b14 100%);
+        radial-gradient(circle at 18% 8%, rgba(96, 165, 250, 0.24), transparent 30%),
+        radial-gradient(circle at 82% 18%, rgba(192, 132, 252, 0.18), transparent 32%),
+        radial-gradient(circle at 48% 88%, rgba(45, 212, 191, 0.16), transparent 36%),
+        linear-gradient(180deg, #fbfbfd 0%, #f8fafc 42%, #eef2f7 100%);
     width: 100%;
     overflow: hidden;
 }
@@ -16,10 +16,28 @@
     content: "";
     position: fixed;
     inset: 0;
+    z-index: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+        linear-gradient(rgba(71, 85, 105, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(71, 85, 105, 0.07) 1px, transparent 1px);
     background-size: 48px 48px;
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.2));
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.08));
     pointer-events: none;
+}
+
+.App::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background:
+        linear-gradient(115deg, transparent 0 42%, rgba(96, 165, 250, 0.12) 42.2% 42.45%, transparent 42.7%),
+        linear-gradient(64deg, transparent 0 55%, rgba(20, 184, 166, 0.1) 55.2% 55.42%, transparent 55.7%),
+        radial-gradient(circle at 72% 42%, rgba(245, 158, 11, 0.08), transparent 19%);
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
 }

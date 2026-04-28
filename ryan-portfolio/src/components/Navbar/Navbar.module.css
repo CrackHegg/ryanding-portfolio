@@ -11,6 +11,7 @@
     margin: 0 var(--section-padding);
     padding: 22px 0;
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
 
 .title {
@@ -31,7 +32,7 @@
     height: 6px;
     border-radius: 50%;
     background: var(--color-accent);
-    box-shadow: 0 0 18px rgba(118, 245, 214, 0.72);
+    box-shadow: 0 0 18px rgba(20, 184, 166, 0.32);
 }
 
 .menuBtn {
@@ -48,9 +49,10 @@
     gap: 8px;
     border: 1px solid var(--glass-border);
     border-radius: 999px;
-    background: rgba(7, 11, 20, 0.58);
+    background: rgba(255, 255, 255, 0.58);
     backdrop-filter: blur(20px);
-    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.24);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: var(--glass-shadow);
     padding: 7px;
     list-style: none;
 }
@@ -70,7 +72,7 @@
 }
 
 .menuItems a:hover {
-    background: rgba(118, 245, 214, 0.1);
+    background: rgba(255, 255, 255, 0.72);
     color: var(--color-text);
 }
 
@@ -95,9 +97,9 @@
         place-items: center;
         width: 36px;
         height: 36px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(148, 163, 184, 0.2);
         border-radius: 14px;
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.64);
         color: var(--color-text);
         padding: 8px;
         cursor: pointer;
@@ -115,9 +117,11 @@
         gap: 6px;
         min-width: 210px;
         border-radius: var(--glass-radius-sm);
-        background: rgba(9, 15, 28, 0.96);
+        background: rgba(255, 255, 255, 0.86);
+        backdrop-filter: blur(22px) saturate(170%);
+        -webkit-backdrop-filter: blur(22px) saturate(170%);
         padding: 12px;
-        box-shadow: 0 22px 70px rgba(0, 0, 0, 0.42);
+        box-shadow: var(--glass-shadow);
     }
 
     .menuItems a {

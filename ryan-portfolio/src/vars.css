@@ -1,19 +1,22 @@
 :root {
     /* Colours */
-    --color-text: #f7fbff;
-    --color-primary: #7f95ff;
-    --color-accent: #76f5d6;
-    --color-secondary: #b9c6df;
-    --color-secondary-muted: #7f8da8;
-    --color-dark: #101a2f;
-    --color-bg: #070b14;
-    --color-card-bg: rgba(255, 255, 255, 0.065);
-    --color-card-border: rgba(209, 224, 255, 0.16);
-    --color-card-hover: rgba(255, 255, 255, 0.095);
-    --glass-bg: rgba(255, 255, 255, 0.075);
-    --glass-bg-strong: rgba(255, 255, 255, 0.11);
-    --glass-border: rgba(231, 239, 255, 0.2);
-    --glass-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+    --color-text: #0f172a;
+    --color-primary: #5b7cfa;
+    --color-accent: #14b8a6;
+    --color-accent-soft: #8b5cf6;
+    --color-warm: #f59e0b;
+    --color-secondary: #334155;
+    --color-secondary-muted: #64748b;
+    --color-dark: #e2e8f0;
+    --color-bg: #f8fafc;
+    --color-card-bg: rgba(255, 255, 255, 0.58);
+    --color-card-border: rgba(255, 255, 255, 0.72);
+    --color-card-hover: rgba(255, 255, 255, 0.74);
+    --glass-bg: rgba(255, 255, 255, 0.58);
+    --glass-bg-strong: rgba(255, 255, 255, 0.72);
+    --glass-border: rgba(255, 255, 255, 0.78);
+    --glass-inner-border: rgba(148, 163, 184, 0.22);
+    --glass-shadow: 0 22px 70px rgba(15, 23, 42, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
     --glass-radius: 24px;
     --glass-radius-sm: 16px;
 
